@@ -19,7 +19,14 @@ Resources:
           - "*"   
         AllowOrigins: 
           - "*"      
-
+      Tags:
+        - Key: "UserName"
+          Value: "Frank"
+        - Key: "ProjectName"
+          Value: "Mobile Integration"
+        - Key: "Environment"
+          Value: "POC" 
+          
   ## Lambda functions
   UploadRequestFunction:
     # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
@@ -49,7 +56,14 @@ Resources:
           Properties:
             Path: /uploads
             Method: get
-            ApiId: !Ref MyApi  
+            ApiId: !Ref MyApi
+      Tags:
+        - Key: "UserName"
+          Value: "Frank"
+        - Key: "ProjectName"
+          Value: "Mobile Integration"
+        - Key: "Environment"
+          Value: "POC"  
 
   ## S3 bucket
   #S3UploadBucket:
