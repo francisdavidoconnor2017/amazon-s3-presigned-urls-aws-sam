@@ -39,10 +39,11 @@ Resources:
       MemorySize: 128
       Environment:
         Variables:
-          UploadBucket: "fulldocscan/private/mobilepoc/mobileuser/pocproject/"  
+          UploadBucket: "fulldocscan"  
+          UploadKey: "/private/mobilepoc/mobileuser/pocproject/" 
       Policies:
         - S3WritePolicy:
-            BucketName: "fulldocscan/private/mobilepoc/mobileuser/pocproject/"
+            BucketName: "fulldocscan"
         ## This permission allows the Lambda function to request signed URLs
         ## for objects that will be publicly readable. Uncomment if you want this ACL.
         # - Statement:
