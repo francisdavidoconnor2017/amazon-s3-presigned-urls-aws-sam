@@ -26,7 +26,7 @@ Resources:
           Value: "Mobile Integration"
         - Key: "Environment"
           Value: "POC" 
-          
+
   ## Lambda functions
   UploadRequestFunction:
     # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
@@ -39,10 +39,10 @@ Resources:
       MemorySize: 128
       Environment:
         Variables:
-          UploadBucket: "fulldocscan"  
+          UploadBucket: "fulldocscan/private/mobilepoc/mobileuser/pocproject/"  
       Policies:
         - S3WritePolicy:
-            BucketName: "fulldocscan"
+            BucketName: "fulldocscan/private/mobilepoc/mobileuser/pocproject/"
         ## This permission allows the Lambda function to request signed URLs
         ## for objects that will be publicly readable. Uncomment if you want this ACL.
         # - Statement:
@@ -87,6 +87,6 @@ Outputs:
     Value: !Sub "https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com"
   S3UploadBucketName:
     Description: "S3 bucket for application uploads"
-    Value: "fulldocscan"
+    Value: "fulldocscan/private/mobilepoc/mobileuser/pocproject/"
     
 
