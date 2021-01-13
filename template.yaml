@@ -20,12 +20,9 @@ Resources:
         AllowOrigins: 
           - "*"      
       Tags:
-        - Key: "UserName"
-          Value: "Frank"
-        - Key: "ProjectName"
-          Value: "Mobile Integration"
-        - Key: "Environment"
-          Value: "POC" 
+        UserName: Frank
+        ProjectName: Mobile Integration
+        Environment: POCInUse
 
   ## Lambda functions
   UploadRequestFunction:
@@ -59,12 +56,9 @@ Resources:
             Method: get
             ApiId: !Ref MyApi
       Tags:
-        - Key: "UserName"
-          Value: "Frank"
-        - Key: "ProjectName"
-          Value: "Mobile Integration"
-        - Key: "Environment"
-          Value: "POC"  
+        UserName: Frank
+        ProjectName: Mobile Integration
+        Environment: POCInUse  
 
   ## S3 bucket
   #S3UploadBucket:
