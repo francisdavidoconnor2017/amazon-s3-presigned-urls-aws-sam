@@ -19,10 +19,6 @@ Resources:
           - "*"   
         AllowOrigins: 
           - "*"      
-      Tags:
-        UserName: Frank
-        ProjectName: Mobile Integration
-        Environment: POCInUse
 
   ## Lambda functions
   UploadRequestFunction:
