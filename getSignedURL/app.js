@@ -35,7 +35,7 @@ const getUploadURL = async function(event) {
   // Get signed URL from S3
   const s3Params = {
     Bucket: process.env.UploadBucket,
-    Key: process.env.UploadKey,
+    Key: key,
     Expires: URL_EXPIRATION_SECONDS,
     ContentType: 'image/jpeg',
 
