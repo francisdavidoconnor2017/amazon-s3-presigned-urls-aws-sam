@@ -50,6 +50,6 @@ const getUploadURL = async function(event) {
 
   return JSON.stringify({
     uploadURL: uploadURL,
-    Key
+    key
   })
 }
