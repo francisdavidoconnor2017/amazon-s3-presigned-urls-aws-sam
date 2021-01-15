@@ -37,7 +37,7 @@ Resources:
       Environment:
         Variables:
           UploadBucket: "fulldocscan"  
-          UploadKey: "/private/mobilepoc/mobileuser/pocproject/" 
+          UploadKey: "private/mobilepoc/mobileuser/pocproject/" 
       Policies:
         - S3WritePolicy:
             BucketName: "fulldocscan"
